@@ -5,13 +5,15 @@
 <!--You're curious, eh? Contact xmpp:ingvarjackal@is-a-furry.org-->
 
 <style>
+html {
+    overflow-y: scroll; 
+}
 .padded {
     margin-right: 15vw;
     margin-left: 15vw;
 }
 .littlepadded {
-    margin-right: 10vw;
-    margin-left: 10vw;
+    display: inline-block;
 }
 .centred {
     text-align: center
@@ -48,21 +50,22 @@
     <footer class="w3-container">
         <p>I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi lover and electronics hobbyist.</p>
         <p><b>Feel free to contact</b> me or refer detailed explanation of my interests below.</p>
-        
-        <ul class="w3-navbar w3-teal littlepadded w3-round-xlarge">
-          <li style="width:50% cursor: pointer"><a onclick="openCity('Furry')">
-            <div class="w3-display-container w3-text-black">
-                <img src="jackal.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline">FURRY</strong></div>
-            </div>
-          </a></li>
-          <li style="width:50% cursor: pointer"><a onclick="openCity('Programming')">
-            <div class="w3-display-container w3-text-black">
-                <img src="console.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                <div class="w3-display-middle w3-xlarge"><strong class="white_outline">PROGRAMMING</strong></div>
-            </div>
-          </a></li>
-        </ul>
+        <center>
+            <ul class="w3-navbar w3-teal littlepadded w3-round-xlarge">
+              <li id="FurryLI" style="width:50% cursor: pointer"><a onclick="openTab('Furry')">
+                <div class="w3-display-container w3-text-black">
+                    <img src="jackal.jpg" alt="Lights" style="width:20vw; cursor: pointer">
+                    <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline">FURRY</strong></div>
+                </div>
+              </a></li>
+              <li id="ProgrammingLI" style="width:50% cursor: pointer"><a onclick="openTab('Programming')">
+                <div class="w3-display-container w3-text-black">
+                    <img src="console.jpg" alt="Lights" style="width:20vw; cursor: pointer">
+                    <div class="w3-display-middle w3-xlarge"><strong class="white_outline">PROGRAMMING</strong></div>
+                </div>
+              </a></li>
+            </ul>
+        </center>
 
         <div id="Programming" class="topic">
             <p>I am senior systems developer.</p>
@@ -132,16 +135,20 @@
 
 <script>
 var lastName = ""
-openCity(lastName)
-function openCity(cityName) {
+openTab(lastName)
+function openTab(cityName) {
     var i;
     var x = document.getElementsByClassName("topic");
     for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
+       x[i].style.display = "none";
+    }
+    if (document.getElementById(lastName.concat("LI")) != null) {
+        document.getElementById(lastName.concat("LI")).className = "w3-teal";
     }
     if (cityName != lastName) {
         document.getElementById(cityName).style.display = "block";
         lastName = cityName
+        document.getElementById(cityName.concat("LI")).className = "w3-cyan";
     } else {
         lastName = ""
     }
