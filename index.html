@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<title>Ingvar Jackal's Home Page</title>
+<link rel="stylesheet" href="w3.css">
+
+<style>
+.padded {
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+.littlepadded {
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+.centred {
+    text-align: center
+}
+.white_outline {
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    opacity: 0.75;
+}
+.furrySlides {
+    display:none;
+}
+.w3-left, .w3-right, .w3-badge {
+    cursor:pointer;
+}
+.w3-badge {
+    height:13px;
+    width:13px;
+    padding:0;  
+}
+</style>
+
+<body class="padded" style="background-color: #F2F2F2; font-size: 120%;">
+    <header class="w3-container w3-teal w3-round-xlarge">
+        <h1>
+            Ingvar Jackal's Home Page
+        </h1>
+    </header>
+    <footer class="w3-container">
+        <p>I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi lover and electronics hobbyist.</p>
+        <p><b>Feel free to contact</b> me or refer detailed explanation of my interests below.</p>
+        
+        <ul class="w3-navbar w3-teal littlepadded w3-round-xlarge">
+          <li style="width:50%"><a onclick="openCity('Furry')">
+            <div class="w3-display-container w3-text-black">
+                <img src="jackal.jpg" alt="Lights" style="width:20vw">
+                <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline">FURRY</strong></div>
+            </div>
+          </a></li>
+          <li style="width:50%"><a onclick="openCity('Programming')">
+            <div class="w3-display-container w3-text-black">
+                <img src="console.jpg" alt="Lights" style="width:20vw">
+                <div class="w3-display-middle w3-xlarge"><strong class="white_outline">PROGRAMMING</strong></div>
+            </div>
+          </a></li>
+        </ul>
+
+        <div id="Programming" class="topic">
+            <p>I am senior systems developer.</p>
+            <p>My main programming interest is server/backend programming for Java platform and applied machine learning.</p>
+            <p>You may find <b>Java</b>, <b>Python</b>, <b>Scala</b>, <b>Kotlin</b> and many other projects in my public <b><a href="https://github.com/IngvarJackal/">repository</a></b>.</p>
+            <p>I am member of <b><a href="https://github.com/codingteam">Codingteam</a></b> - non-profit community of programmers and engineers.</p>
+            <p>Also, I <b>tutor</b> beginner programmers for free and <b>contribute</b> to interesting open-source projects; <b>feel free to contact</b> me to get my current status/open apprentice slots.</p>
+        </div>
+
+        <div id="Furry" class="topic">
+            <p>The <b>furry fandom</b> is a subculture of people, interested in fictional anthropomorphic animal characters with human personalities and characteristics like exhibiting human intelligence and facial expressions, the ability to speak, walk on two legs, wear clothes etc.</p>
+            <p>Members of furry fandom gather on the Internet and at <b>furry conventions</b>. I am active participant of furry fandom since 2009. You may find me on FurAffinity or in Telegram. Also, I participate in furry conventions like WUFF<!--, Eurofurrence, Golden Leaves or Rusfurence-->.</p>
+            <p>Many furry fans create <b>fursona</b> - anthropomorphic animal character which furry fans associate themselves with. For example, I am cybernetic anthropomorphic golden jackal.</p>
+            <p>Furries draw art, write literature, play games and perform <b>fursuiting</b>. Fursuits are animal costumes which usually used by furry fans for personal enjoyment, mostly in public places or during furry conventions. Fursuiters (fans of fursuiting) sometimes adopt another personality while in costume for the purpose of performance. Unlike mascot suits, fursuits represent a stand-alone character.</p>
+            <p>Generally, fandom is open and full with young friendly people. If you're interested, <b>feel free to contact</b> me via credentials below <b>=^.^=</b></p>
+            
+            <div class="w3-content w3-display-container">
+                <img class="furrySlides" src="dreamkeepers_beyond_the_sky_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('dreamkeepers_modal').style.display='block'">
+                <div id="dreamkeepers_modal" class="w3-modal" onclick="this.style.display='none'">
+                  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright">&times;</span>
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <img src="dreamkeepers_beyond_the_sky.jpg" style="width:100%">
+                  </div>
+                </div>
+                
+                <img class="furrySlides" src="fursuit_buddies_by_kium_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('fursuits_modal').style.display='block'">
+                <div id="fursuits_modal" class="w3-modal" onclick="this.style.display='none'">
+                  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright">&times;</span>
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <img src="fursuit_buddies_by_kium.jpg" style="width:100%">
+                  </div>
+                </div>
+                
+                <img class="furrySlides" src="Furry_Sculptures_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('sculptures_modal').style.display='block'">
+                <div id="sculptures_modal" class="w3-modal" onclick="this.style.display='none'">
+                  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright">&times;</span>
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <img src="Furry_Sculptures.jpg" style="width:100%">
+                  </div>
+                </div>
+                
+                <img class="furrySlides" src="kurrel_raven_album_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('youtube_modal').style.display='block'">
+                <div id="youtube_modal" class="w3-modal" onclick="this.style.display='none'">
+                  <div class="w3-modal-content w3-animate-zoom">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/wwT4ZXW3xYE" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              
+              <div class="w3-center w3-section w3-large w3-text-white w3-display-bottomleft" style="width:100%">
+                <div class="w3-left w3-padding-left w3-hover-text-khaki white_outline" onclick="plusDivs(-1)">&#10094;</div>
+                <div class="w3-right w3-padding-right w3-hover-text-khaki white_outline" onclick="plusDivs(1)">&#10095;</div>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+              </div>
+            </div>
+        </div>
+        
+        <h2>Contacts</h2>
+        <p><b>telegram:</b> <a href="https://telegram.me/ingvarjackal">telegram.me/ingvarjackal</a></p>
+        <p><b>email:</b> <a href="mailto:ingvarjackal@gmail.com">ingvarjackal@gmail.com</a></p>
+        <p><b>skype:</b> <a href="skype:ingvarjackalwerwr">ingvarjackalwerwr</a></p>
+        <p><b>VK:</b> <a href="https://vk.com/ingvarjackal">vk.com/ingvarjackal</a></p>
+    </footer>
+</body>
+
+<script>
+var lastName = ""
+openCity(lastName)
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("topic");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    if (cityName != lastName) {
+        document.getElementById(cityName).style.display = "block";
+        lastName = cityName
+    } else {
+        lastName = ""
+    }
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("furrySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</html> 
