@@ -13,9 +13,6 @@ html {
     margin-right: 15vw;
     margin-left: 15vw;
 }
-.littlepadded {
-    display: inline-block;
-}
 .centred {
     text-align: center
 }
@@ -40,11 +37,30 @@ html {
     width:13px;
     padding:0;  
 }
+.header-style {
+    font-size: 3.2vw;
+}
+
+@media screen and (max-width: 600px) {
+   .header-style  {
+        font-size: 1em;
+    }
+   .padded {
+        margin-right: 8vw;
+        margin-left: 8vw;
+    }
+}
+@media screen and (max-width: 400px) {
+   .padded {
+        margin-right: 1vw;
+        margin-left: 1vw;
+    }
+}
 </style>
 
 <body class="padded" style="background-color: #F2F2F2; font-size: 120%;">
     <header class="w3-container w3-teal w3-round-xlarge">
-        <h1 id="header_text">
+        <h1 id="header_text" class="header-style">
             <!--moved to localization-->
         </h1>
     </header>
@@ -52,20 +68,18 @@ html {
         <p id="intro1_text"><!--moved to localization--></p>
         <p id="intro2_text"><!--moved to localization--></p>
         <center>
-            <ul class="w3-navbar w3-teal littlepadded w3-round-xlarge">
-              <li id="FurryLI" style="width:50% cursor: pointer"><a onclick="openTab('Furry')">
+            <button type='button' onclick='openTab("Furry")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
                 <div class="w3-display-container w3-text-black">
                     <img src="jackal.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                    <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline" id="furry_button_text"><!--moved to localization--></strong></div>
+                    <div class="w3-display-middle" style="font-size: 4vw"><strong class="white_outline" id="furry_button_text"><!--moved to localization--></strong></div>
                 </div>
-              </a></li>
-              <li id="ProgrammingLI" style="width:50% cursor: pointer"><a onclick="openTab('Programming')">
-                <div class="w3-display-container w3-text-black">
+            </button>
+            <button type='button' onclick='openTab("Programming")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
+               <div class="w3-display-container w3-text-black">
                     <img src="console.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                    <div class="w3-display-middle w3-xlarge"><strong class="white_outline" id="programming_button_text"><!--moved to localization--></strong></div>
+                    <div class="w3-display-middle" style="font-size: 2vw"><strong class="white_outline" id="programming_button_text"><!--moved to localization--></strong></div>
                 </div>
-              </a></li>
-            </ul>
+            </button>
         </center>
 
         <div id="Programming" class="topic">
