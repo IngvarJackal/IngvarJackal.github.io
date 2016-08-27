@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <title>Ingvar Jackal's Home Page</title>
 <link rel="stylesheet" href="w3.css">
-<!--You're curious, eh? Contact xmpp:ingvarjackal@is-a-furry.org-->
+<!--You're curious, eh? xmpp:ingvarjackal@is-a-furry.org-->
 
 <style>
 html {
@@ -43,44 +44,44 @@ html {
 
 <body class="padded" style="background-color: #F2F2F2; font-size: 120%;">
     <header class="w3-container w3-teal w3-round-xlarge">
-        <h1>
-            Ingvar Jackal's Home Page
+        <h1 id="header_text">
+            <!--moved to localization-->
         </h1>
     </header>
     <footer class="w3-container">
-        <p>I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi lover and electronics hobbyist.</p>
-        <p><b>Feel free to contact</b> me or refer detailed explanation of my interests below.</p>
+        <p id="intro1_text"><!--moved to localization--></p>
+        <p id="intro2_text"><!--moved to localization--></p>
         <center>
             <ul class="w3-navbar w3-teal littlepadded w3-round-xlarge">
               <li id="FurryLI" style="width:50% cursor: pointer"><a onclick="openTab('Furry')">
                 <div class="w3-display-container w3-text-black">
                     <img src="jackal.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                    <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline">FURRY</strong></div>
+                    <div class="w3-display-middle w3-xxxlarge"><strong class="white_outline" id="furry_button_text"><!--moved to localization--></strong></div>
                 </div>
               </a></li>
               <li id="ProgrammingLI" style="width:50% cursor: pointer"><a onclick="openTab('Programming')">
                 <div class="w3-display-container w3-text-black">
                     <img src="console.jpg" alt="Lights" style="width:20vw; cursor: pointer">
-                    <div class="w3-display-middle w3-xlarge"><strong class="white_outline">PROGRAMMING</strong></div>
+                    <div class="w3-display-middle w3-xlarge"><strong class="white_outline" id="programming_button_text"><!--moved to localization--></strong></div>
                 </div>
               </a></li>
             </ul>
         </center>
 
         <div id="Programming" class="topic">
-            <p>I am senior systems developer.</p>
-            <p>My main programming interests are server/backend programming for Java platform and applied machine learning.</p>
-            <p>You may find <b>Java</b>, <b>Python</b>, <b>Scala</b>, <b>Kotlin</b> and many other projects in my public <b><a href="https://github.com/IngvarJackal/">repository</a></b>.</p>
-            <p>I am member of <b><a href="https://github.com/codingteam">Codingteam</a></b> - non-profit organization of programmers and engineers.</p>
-            <p>Also, I <b>tutor</b> beginner programmers for free and <b>contribute</b> to interesting open-source projects; <b>feel free to contact</b> me to get my current status/open apprentice slots.</p>
+            <p id="programming1_text"><!--moved to localization--></p>
+            <p id="programming2_text"><!--moved to localization--></p>
+            <p id="programming3_text"><!--moved to localization--></p>
+            <p id="programming4_text"><!--moved to localization--></p>
+            <p id="programming5_text"><!--moved to localization--></p>
         </div>
 
         <div id="Furry" class="topic">
-            <p>The <b>furry fandom</b> is a subculture of people, interested in fictional anthropomorphic animal characters with human personalities and characteristics like exhibiting human intelligence and facial expressions, the ability to speak, walk on two legs, wear clothes etc. like cartoon animals from The Lion King</p>
-            <p>Members of furry fandom gather on the Internet and at <b>furry conventions</b>. I am active participant of furry fandom since 2009. You may find me on FurAffinity or Telegram chats. Also, I participate in furry conventions like WUFF<!--, Eurofurrence, Golden Leaves or Rusfurence-->.</p>
-            <p>Many furry fans create <b>fursona</b> - anthropomorphic animal character which furry fans associate themselves with. For example, I am cybernetic anthropomorphic golden jackal.</p>
-            <p>Furries draw art, write literature, play games and perform <b>fursuiting</b>. Fursuits are animal costumes which usually used by furry fans for personal enjoyment, mostly in public places or during furry conventions. Fursuiters (fans of fursuiting) sometimes adopt another personality while in costume for the purpose of performance. Unlike mascot suits, fursuits represent a stand-alone character.</p>
-            <p>Generally, fandom is open and full with young friendly people. If you're interested, <b>feel free to contact</b> me via credentials below <b>=^.^=</b></p>
+            <p id="furry1_text"><!--moved to localization--></p>
+            <p id="furry2_text"><!--moved to localization--></p>
+            <p id="furry3_text"><!--moved to localization--></p>
+            <p id="furry4_text"><!--moved to localization--></p>
+            <p id="furry5_text"><!--moved to localization--></p>
             
             <div class="w3-content w3-display-container">
                 <img class="furrySlides" src="dreamkeepers_beyond_the_sky_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('dreamkeepers_modal').style.display='block'">
@@ -107,10 +108,9 @@ html {
                   </div>
                 </div>
                 
-                <img class="furrySlides" src="kurrel_raven_album_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('youtube_modal').style.display='block'">
+                <img class="furrySlides" src="kurrel_raven_album_wide.jpg" style="width:100%;cursor:zoom-in" onclick="document.getElementById('youtube_modal').style.display='block'; loadYoutube()">
                 <div id="youtube_modal" class="w3-modal" onclick="this.style.display='none'">
-                  <div class="w3-modal-content w3-animate-zoom">
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/wwT4ZXW3xYE" frameborder="0" allowfullscreen></iframe>
+                  <div class="w3-modal-content w3-animate-zoom" id="iframe_holder">
                   </div>
                 </div>
               
@@ -125,15 +125,68 @@ html {
             </div>
         </div>
         
-        <h2>Contacts</h2>
-        <p><b>telegram:</b> <a href="https://telegram.me/ingvarjackal">telegram.me/ingvarjackal</a></p>
-        <p><b>email:</b> <a href="mailto:ingvarjackal@gmail.com">ingvarjackal@gmail.com</a></p>
-        <p><b>skype:</b> <a href="skype:ingvarjackalwerwr">ingvarjackalwerwr</a></p>
-        <p><b>VK:</b> <a href="https://vk.com/ingvarjackal">vk.com/ingvarjackal</a></p>
+        <h2 id="contacts_text"><!--moved to localization--></h2>
+        <p id="telegram_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
+        <p id="email_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
+        <p id="skype_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
+        <p id="vk_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
     </footer>
 </body>
 
 <script>
+
+var localization  = {
+    "en": {
+        "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-teal' style='border: none; float: right'>RU</button>",
+        "intro1_text": "I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi fan and electronics hobbyist.",
+        "intro2_text": "<b>Feel free to contact</b> me or refer detailed explanation of my interests below.",
+        "furry_button_text": "FURRY",
+        "programming_button_text": "PROGRAMMING",
+        "programming1_text": "I am senior systems developer.",
+        "programming2_text": "My main programming interests are server/backend programming for Java platform and applied machine learning.",
+        "programming3_text": "You may find <b>Java</b>, <b>Python</b>, <b>Scala</b>, <b>Kotlin</b> and many other projects in my public <b><a href='https://github.com/IngvarJackal/'>repository</a></b>.",
+        "programming4_text": "I am member of <b><a href='https://github.com/codingteam'>Codingteam</a></b> - non-profit organization of programmers and engineers.",
+        "programming5_text": "Also, I <b>tutor</b> beginner programmers for free and <b>contribute</b> to interesting open-source projects; <b>feel free to contact</b> me to get my current status/open apprentice slots.",
+        "furry1_text": "The <b>furry fandom</b> is a subculture of people, interested in fictional anthropomorphic animal characters with human personalities and characteristics like exhibiting human intelligence and facial expressions, the ability to speak, walk on two legs, wear clothes etc. like cartoon animals from The Lion King or Zootopia.",
+        "furry2_text": "Members of furry fandom gather on the Internet and at <b>furry conventions</b>. I am active participant of furry fandom since 2009. You may find me on FurAffinity or Telegram chats. Also, I participate in furry conventions like <b><a href='http://en.wikifur.com/wiki/WUFF'>WUFF</a></b>.",
+        "furry3_text": "Many furry fans create <b>fursona</b> - anthropomorphic animal character which furry fans associate themselves with. For example, I am cybernetic anthropomorphic golden jackal.",
+        "furry4_text": "Furries draw art, write literature, play games and perform <b>fursuiting</b>. Fursuits are animal costumes which usually used by furry fans for personal enjoyment, mostly in public places or during furry conventions. Fursuiters (fans of fursuiting) sometimes adopt another personality while in costume for the purpose of performance. Unlike mascot suits, fursuits represent a stand-alone character.",
+        "furry5_text": "Generally, fandom is open and full with young friendly people. If you're interested, <b>feel free to contact</b> me via credentials below <b>=^.^=</b>",
+        "contacts_text": "Contacts"
+    },
+    "ru": {
+        "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-teal' style='border: none; float: right'>EN</button>",
+        "intro1_text": "Я <b>Ингвар Шакал</b> - программист, антропоморфный шакал и бывший микробиолог, увлекаюсь электроникой и научной фантастикой.",
+        "intro2_text": "Вы можете <b>связаться со мной</b> или прочесть более подробное описание моих интересов ниже",
+        "furry_button_text": "ФУРРИ",
+        "programming_button_text": "ПРОГРАМ\nМИРОВАНИЕ",
+        "programming1_text": "Я старший разработчик бизнес-систем.",
+        "programming2_text": "Основными областями интереса в программировании для меня являются серверное программирование для экосистемы Java и прикладное машинное обучение",
+        "programming3_text": "Вы можете найти проекты на <b>Java</b>, <b>Python</b>, <b>Scala</b>, <b>Kotlin</b> и многие другие в моём публичном <b><a href='https://github.com/IngvarJackal/'>репозитории</a></b>.",
+        "programming4_text": "Я состою в <b><a href='https://github.com/codingteam'>Codingteam</a></b> - некоммерческой организации программистов и инженеров.",
+        "programming5_text": "Также я бесплатно <b>обучаю</b> начинающих программистов и делаю вклад в интересные опенсорсные проекты; <b>свяжитесь со мной</b>, чтобы узнать мой текущий статус или наличие свободных мест для подмастерья.",
+        "furry1_text": "<b>Фурри</b> - это субкультура людей, которым нравятся придуманные животные с личностями и человеческими чертами, такими как разум или мимика лица, способность говорить, ходить на двух ногах, носить одежду и т.п., например персонажи из Короля Льва или Зверополиса.",
+        "furry2_text": "Члены фурри-сообщества собираются в интернете и на <b>фурри-конвенциях</b>. Я активно участвую в движении с 2009 года. Вы можете найти меня на FurAffinity или в фурри-чатах Telegram. Также я участвую в фурри-конвенциях, таких как <b><a href='http://ru.wikifur.com/wiki/WUFF'>ВУФФ</a></b>.",
+        "furry3_text": "Многие фурри-фаны создают <b>фурсону</b> - антромопорфного животного персонажа, с которым они себя ассоциируют. Например, я - антропоморфный шакал-киборг.",
+        "furry4_text": "У фуррей полно рисунков, литературы, мы играем и занимаемся <b>фурсьютингом</b>. Фурсьюты - это костюмы животных, которые обычно можно встретить в публичных местах или во время фурри-конвенций. Фурсьютеры (фанаты фурсьютинга) иногда вживаются в роль, когда находятся в костюме во время выступления.  В отличии от маскотов, фурсьют представляет собой самостоятельного персонажа.",
+        "furry5_text": "В общем, фурри-сообщество открытое, а его участники зачастую молоды и дружелюбны. Если вам интересно, <b>сконтактируйте</b> со мной по любой из ссылок ниже <b>=^.^=</b>",
+        "contacts_text": "Контакты"
+    }
+}
+
+document.getElementById("telegram_dynamic_spam_prevent").innerHTML = '<b>telegram:</b> <a href="'+window.atob('aHR0cHM6Ly90ZWxlZ3JhbS5tZS9pbmd2YXJqYWNrYWw=')+'">'+window.atob('dGVsZWdyYW0ubWUvaW5ndmFyamFja2Fs')+'</a>';
+document.getElementById("email_dynamic_spam_prevent").innerHTML = '<b>email:</b> <a href="mailto:'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'">'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'</a>';
+document.getElementById("skype_dynamic_spam_prevent").innerHTML = '<b>skype:</b> <a href="skype:'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'">'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'</a>';
+document.getElementById("vk_dynamic_spam_prevent").innerHTML = '<b>VK:</b> <a href="'+window.atob('aHR0cHM6Ly92ay5jb20vaW5ndmFyamFja2Fs')+'">'+window.atob('dmsuY29tL2luZ3ZhcmphY2thbA==')+'</a>';
+
+function enableLocalization(d) {
+    for (var key in d) {
+        document.getElementById(key).innerHTML = d[key];
+    }
+}
+
+enableLocalization(localization["en"])
+
 var lastName = ""
 openTab(lastName)
 function openTab(cityName) {
@@ -163,6 +216,14 @@ function plusDivs(n) {
 
 function currentDiv(n) {
   showDivs(slideIndex = n);
+}
+
+var youtubeLoaded = false
+function loadYoutube() {
+    if (!youtubeLoaded) {
+        document.getElementById('iframe_holder').innerHTML="<iframe width='100%' height='500' src='https://www.youtube.com/embed/wwT4ZXW3xYE' frameborder='0' allowfullscreen></iframe>";
+        youtubeLoaded = true
+    }
 }
 
 function showDivs(n) {
