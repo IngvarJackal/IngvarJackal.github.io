@@ -10,8 +10,8 @@ html {
     overflow-y: scroll; 
 }
 .padded {
-    margin-right: 15vw;
-    margin-left: 15vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
 .centred {
     text-align: center
@@ -38,23 +38,31 @@ html {
     padding:0;  
 }
 .header-style {
-    font-size: 3.2vw;
+    font-size: 3.5vw;
+}
+.general-text {
+    font-size: 120%;
 }
 
 @media screen and (max-width: 60em) {
    .padded {
-        margin-right: 10vw;
-        margin-left: 10vw;
-    }
-}
-
-@media screen and (max-width: 40em) {
-   .header-style  {
-        font-size: 1em;
-    }
-   .padded {
         margin-right: 5vw;
         margin-left: 5vw;
+    }
+    .general-text {
+        font-size: 140%;
+    }
+}
+@media screen and (max-width: 40em) {
+   .header-style  {
+        font-size: 5vw;
+    }
+   .padded {
+        margin-right: 3vw;
+        margin-left: 3vw;
+    }
+    .general-text {
+        font-size: 160%;
     }
 }
 @media screen and (max-width: 20em) {
@@ -62,10 +70,13 @@ html {
         margin-right: 1vw;
         margin-left: 1vw;
     }
+    .general-text {
+        font-size: 140%;
+    }
 }
 </style>
 
-<body class="padded" style="background-color: #F2F2F2; font-size: 120%;">
+<body class="padded general-text" style="background-color: #F2F2F2">
     <header class="w3-container w3-teal w3-round-xlarge">
         <h1 id="header_text" class="header-style">
             <!--moved to localization-->
