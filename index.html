@@ -37,29 +37,16 @@ html {
     margin-right: 15vw;
     margin-left: 15vw;
 }
-
-@media screen and (max-width: 100em) {
-    .padded {
-        margin-right: 12vw;
-        margin-left: 12vw;
-    }
-}
-@media screen and (max-width: 90em) {
-    .padded {
-        margin-right: 9vw;
-        margin-left: 9vw;
-    }
-}
 @media screen and (max-width: 80em) {
     .padded {
-        margin-right: 7vw;
-        margin-left: 7vw;
+        margin-right: 10vw;
+        margin-left: 10vw;
     }
 }
 @media screen and (max-width: 70em) {
     .padded {
-        margin-right: 5vw;
-        margin-left: 5vw;
+        margin-right: 6vw;
+        margin-left: 6vw;
     }
 }
 @media screen and (max-width: 60em) {
@@ -86,15 +73,15 @@ html {
         <p id="intro1_text"><!--moved to localization--></p>
         <p id="intro2_text"><!--moved to localization--></p>
         <center>
-            <button type='button' onclick='openTab("Furry")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
+            <button id="FurryBtn" type='button' onclick='openTab("Furry")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
                 <div class="w3-display-container w3-text-black">
-                    <img src="jackal.jpg" alt="Lights" style="width:20vw; cursor: pointer">
+                    <img src="jackal.jpg" alt="Lights" style="cursor: pointer" id="furryimg">
                     <div class="w3-display-middle" style="font-size: 3.5vw"><strong class="white_outline" id="furry_button_text"><!--moved to localization--></strong></div>
                 </div>
             </button>
-            <button type='button' onclick='openTab("Programming")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
+            <button id="ProgrammingBtn" type='button' onclick='openTab("Programming")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
                <div class="w3-display-container w3-text-black">
-                    <img src="console.jpg" alt="Lights" style="width:20vw; cursor: pointer">
+                    <img src="console.jpg" alt="Lights" style="cursor: pointer" id="progimg">
                     <div class="w3-display-middle" style="font-size: 2vw"><strong class="white_outline" id="programming_button_text"><!--moved to localization--></strong></div>
                 </div>
             </button>
@@ -169,7 +156,7 @@ html {
 
 var localization  = {
     "en": {
-        "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-teal' style='border: none; float: right'>RU</button>",
+        "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-cyan w3-round-xlarge' style='border: none; float: right'>RU</button>",
         "intro1_text": "I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi fan and electronics hobbyist.",
         "intro2_text": "<b>Feel free to contact</b> me or refer detailed explanation of my interests below.",
         "furry_button_text": "FURRY",
@@ -187,7 +174,7 @@ var localization  = {
         "contacts_text": "Contacts"
     },
     "ru": {
-        "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-teal' style='border: none; float: right'>EN</button>",
+        "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-cyan w3-round-xlarge' style='border: none; float: right'>EN</button>",
         "intro1_text": "Я <b>Ингвар Шакал</b> - программист, антропоморфный шакал и бывший микробиолог, увлекаюсь электроникой и научной фантастикой.",
         "intro2_text": "Вы можете <b>связаться со мной</b> или прочесть более подробное описание моих интересов ниже",
         "furry_button_text": "ФУРРИ",
@@ -216,28 +203,31 @@ function enableLocalization(d) {
         document.getElementById(key).innerHTML = d[key];
     }
 }
-
 enableLocalization(localization["en"])
 
 var lastName = ""
-openTab(lastName)
-function openTab(cityName) {
+function openTab(name) {
     var i;
     var x = document.getElementsByClassName("topic");
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";
     }
-    if (document.getElementById(lastName.concat("LI")) != null) {
-        document.getElementById(lastName.concat("LI")).className = "w3-teal";
+    if (document.getElementById(lastName.concat("Btn")) != null) {
+        document.getElementById(lastName.concat("Btn")).className = document.getElementById(lastName.concat("Btn")).className.replace("w3-cyan", "w3-teal");
     }
-    if (cityName != lastName) {
-        document.getElementById(cityName).style.display = "block";
-        lastName = cityName
-        document.getElementById(cityName.concat("LI")).className = "w3-cyan";
+    if (name != lastName) {
+        document.getElementById(name).style.display = "block";
+        lastName = name
+        document.getElementById(lastName.concat("Btn")).className = document.getElementById(lastName.concat("Btn")).className.replace("w3-teal", "w3-cyan");
     } else {
         lastName = ""
     }
 }
+openTab(lastName)
+
+var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+document.getElementById("furryimg").style.width = width/5 + "px";
+document.getElementById("progimg").style.width = width/5 + "px";
 
 var slideIndex = 1;
 showDivs(slideIndex);
