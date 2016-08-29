@@ -37,10 +37,16 @@ html {
     margin-right: 15vw;
     margin-left: 15vw;
 }
+.btn-img {
+    width: 20em;
+}
 @media screen and (max-width: 80em) {
     .padded {
         margin-right: 10vw;
         margin-left: 10vw;
+    }
+    .btn-img {
+        width: 17em;
     }
 }
 @media screen and (max-width: 70em) {
@@ -60,6 +66,14 @@ html {
         margin-right: 1vw;
         margin-left: 1vw;
     }
+    .btn-img {
+        width: 12em;
+    }
+}
+@media screen and (max-width: 25em) {
+    .btn-img {
+        width: 6em;
+    }
 }
 </style>
 
@@ -75,13 +89,13 @@ html {
         <center>
             <button id="FurryBtn" type='button' onclick='openTab("Furry")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
                 <div class="w3-display-container w3-text-black">
-                    <img src="jackal.jpg" alt="Lights" style="cursor: pointer" id="furryimg">
+                    <img class="btn-img" src="jackal.jpg" alt="Lights" style="cursor: pointer">
                     <div class="w3-display-middle" style="font-size: 3.5vw"><strong class="white_outline" id="furry_button_text"><!--moved to localization--></strong></div>
                 </div>
             </button>
             <button id="ProgrammingBtn" type='button' onclick='openTab("Programming")' class="w3-btn w3-teal w3-round-xlarge" style='width:50% cursor: pointer'>
                <div class="w3-display-container w3-text-black">
-                    <img src="console.jpg" alt="Lights" style="cursor: pointer" id="progimg">
+                    <img class="btn-img" src="console.jpg" alt="Lights" style="cursor: pointer">
                     <div class="w3-display-middle" style="font-size: 2vw"><strong class="white_outline" id="programming_button_text"><!--moved to localization--></strong></div>
                 </div>
             </button>
@@ -160,7 +174,7 @@ var localization  = {
         "intro1_text": "I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi fan and electronics hobbyist.",
         "intro2_text": "<b>Feel free to contact</b> me or refer detailed explanation of my interests below.",
         "furry_button_text": "FURRY",
-        "programming_button_text": "PROGRAMMING",
+        "programming_button_text": "PROGRAM<br>MING",
         "programming1_text": "I am senior systems developer.",
         "programming2_text": "My main programming interests are server/backend programming for Java platform and applied machine learning.",
         "programming3_text": "You may find <b>Java</b>, <b>Python</b>, <b>Scala</b>, <b>Kotlin</b> and many other projects in my public <b><a href='https://github.com/IngvarJackal/'>repository</a></b>.",
@@ -224,10 +238,6 @@ function openTab(name) {
     }
 }
 openTab(lastName)
-
-var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-document.getElementById("furryimg").style.width = width/5 + "px";
-document.getElementById("progimg").style.width = width/5 + "px";
 
 var slideIndex = 1;
 showDivs(slideIndex);
