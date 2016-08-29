@@ -40,6 +40,9 @@ html {
 .btn-img {
     width: 20em;
 }
+.btn-local:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 5px 10px 0 rgba(0,0,0,0.19);
+}
 @media screen and (max-width: 80em) {
     .padded {
         margin-right: 10vw;
@@ -170,7 +173,7 @@ html {
 
 var localization  = {
     "en": {
-        "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-cyan w3-round-xlarge' style='border: none; float: right'>RU</button>",
+        "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-cyan w3-round-xlarge btn-local' style='border: none; float: right'>RU</button>",
         "intro1_text": "I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi fan and electronics hobbyist.",
         "intro2_text": "<b>Feel free to contact</b> me or refer detailed explanation of my interests below.",
         "furry_button_text": "FURRY",
@@ -188,7 +191,7 @@ var localization  = {
         "contacts_text": "Contacts"
     },
     "ru": {
-        "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-cyan w3-round-xlarge' style='border: none; float: right'>EN</button>",
+        "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-cyan w3-round-xlarge btn-local' style='border: none; float: right'>EN</button>",
         "intro1_text": "Я <b>Ингвар Шакал</b> - программист, антропоморфный шакал и бывший микробиолог, увлекаюсь электроникой и научной фантастикой.",
         "intro2_text": "Вы можете <b>связаться со мной</b> или прочесть более подробное описание моих интересов ниже",
         "furry_button_text": "ФУРРИ",
