@@ -166,10 +166,11 @@ html {
         </div>
         
         <h2 id="contacts_text"><!--moved to localization--></h2>
-        <p id="telegram_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
-        <p id="email_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
-        <p id="skype_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
-        <p id="vk_dynamic_spam_prevent"><!--moved to antispam dynamic rendering--></p>
+        <p id="telegram_dynamic_spam_prevent">please enable javascript to see telegram account<!--moved to antispam dynamic rendering--></p>
+        <p id="facebook_dynamic_spam_prevent">please enable javascript to see Facebook page<!--moved to antispam dynamic rendering--></p>
+        <p id="vk_dynamic_spam_prevent">please enable javascript to see VK page<!--moved to antispam dynamic rendering--></p>
+        <p id="email_dynamic_spam_prevent">please enable javascript to see email<!--moved to antispam dynamic rendering--></p>
+        <p id="skype_dynamic_spam_prevent">please enable javascript to see skype account<!--moved to antispam dynamic rendering--></p>
     </footer>
 </body>
 
@@ -214,10 +215,11 @@ var localization  = {
     }
 }
 
-document.getElementById("telegram_dynamic_spam_prevent").innerHTML = '<b>telegram:</b> <a href="'+window.atob('aHR0cHM6Ly90ZWxlZ3JhbS5tZS9pbmd2YXJqYWNrYWw=')+'">'+window.atob('dGVsZWdyYW0ubWUvaW5ndmFyamFja2Fs')+'</a>';
-document.getElementById("email_dynamic_spam_prevent").innerHTML = '<b>email:</b> <a href="mailto:'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'">'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'</a>';
-document.getElementById("skype_dynamic_spam_prevent").innerHTML = '<b>skype:</b> <a href="skype:'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'">'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'</a>';
+document.getElementById("telegram_dynamic_spam_prevent").innerHTML = '<b>Telegram:</b> <a href="'+window.atob('aHR0cHM6Ly90ZWxlZ3JhbS5tZS9pbmd2YXJqYWNrYWw=')+'">'+window.atob('dGVsZWdyYW0ubWUvaW5ndmFyamFja2Fs')+'</a>';
+document.getElementById("email_dynamic_spam_prevent").innerHTML = '<b>Email:</b> <a href="mailto:'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'">'+window.atob('aW5ndmFyamFja2FsQGdtYWlsLmNvbQ==')+'</a>';
+document.getElementById("skype_dynamic_spam_prevent").innerHTML = '<b>Skype:</b> <a href="skype:'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'">'+window.atob('aW5ndmFyamFja2Fsd2Vyd3I=')+'</a>';
 document.getElementById("vk_dynamic_spam_prevent").innerHTML = '<b>VK:</b> <a href="'+window.atob('aHR0cHM6Ly92ay5jb20vaW5ndmFyamFja2Fs')+'">'+window.atob('dmsuY29tL2luZ3ZhcmphY2thbA==')+'</a>';
+document.getElementById("facebook_dynamic_spam_prevent").innerHTML = '<b>Facebook:</b> <a href="'+window.atob('aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2luZ3ZhcmphY2thbA==')+'">'+window.atob('ZmFjZWJvb2suY29tL2luZ3ZhcmphY2thbA==')+'</a>';
 
 function enableLocalization(d) {
     for (var key in d) {
