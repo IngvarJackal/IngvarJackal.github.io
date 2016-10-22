@@ -37,7 +37,6 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/39958490" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
-
 <style>
 html {
     overflow-y: scroll; 
@@ -79,6 +78,15 @@ html {
 .btn-local:hover {
     box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 5px 8px 0 rgba(0,0,0,0.19);
     transition: box-shadow 0.3s ease-in-out
+}
+.gallerybutton {
+ border: 0;
+ box-shadow:none;
+ border-radius: 0px;
+ text-align: left;
+ line-height:1em;
+ height:1.5em;
+ width: 100%;
 }
 @media screen and (max-width: 80em) {
     .padded {
@@ -123,6 +131,11 @@ html {
             <!--moved to localization-->
         </h1>
     </header>
+    <div style="margin-right: 1vw; margin-left: 1vw;">
+        <a href="gallery">
+           <button class="gallerybutton w3-cyan" id="gallerybutton_text"><!--moved to localization--></button>
+        </a>
+    </div>
     <footer class="w3-container">
         <p id="intro1_text"><!--moved to localization--></p>
         <p id="intro2_text"><!--moved to localization--></p>
@@ -212,6 +225,7 @@ html {
 var localization  = {
     "en": {
         "header_text": "Ingvar Jackal's Home Page <button type='button' onclick='enableLocalization(localization[\"ru\"])' class='w3-cyan w3-round-xlarge btn-local' style='border: none; float: right'>RU</button>",
+        "gallerybutton_text": "Gallery",
         "intro1_text": "I am <b>Ingvar Jackal</b> - programmer, anthrojackal and ex microbiologist, sci-fi fan and electronics hobbyist.",
         "intro2_text": "<b>Feel free to contact</b> me or refer detailed explanation of my interests below.",
         "furry_button_text": "FURRY",
@@ -230,6 +244,7 @@ var localization  = {
     },
     "ru": {
         "header_text": "Домашняя страничка Ингвара Шакала <button type='button' onclick='enableLocalization(localization[\"en\"])' class='w3-cyan w3-round-xlarge btn-local' style='border: none; float: right'>EN</button>",
+        "gallerybutton_text": "Галерея",
         "intro1_text": "Я <b>Ингвар Шакал</b> - программист, антропоморфный шакал и бывший микробиолог, увлекаюсь электроникой и научной фантастикой.",
         "intro2_text": "Вы можете <b>связаться со мной</b> или прочесть более подробное описание моих интересов ниже",
         "furry_button_text": "ФУРРИ",
